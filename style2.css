@@ -1,0 +1,70 @@
+/* PAGE & BODY */
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  color: #333; /* Dark text color */
+}
+
+/* WIDGET */
+.widget-wrap {
+  width: 60%; 
+  padding: 30px; 
+  border-radius: 15px;
+  background: grey;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Slightly larger box shadow */
+}
+
+h1 {
+  color: whitesmoke;
+}
+
+
+/* (A) WRAPPER */
+#quizWrap {
+  max-width: 100%; /* Full width within the widget */
+  margin: 20px 0; /* Add margin for separation */
+}
+
+/* (B) QUESTION */
+#quizQn {
+  padding: 20px;
+  background: whitesmoke;
+  color: black;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+/* (C) ANSWERS */
+#quizAns {
+  margin: 20px 0; /* Add margin for separation */
+  display: flex;
+  flex-direction: column; /* Display answers in a column */
+  gap: 15px; /* Vertical spacing between answers */
+}
+#quizAns input[type=radio] { display: none; }
+#quizAns label {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+#quizAns label.correct {
+  background: lightgreen;
+  border: 1px solid #60a03f;
+}
+#quizAns label.wrong {
+  background: red;
+  border: 1px solid #c78181;
+}
